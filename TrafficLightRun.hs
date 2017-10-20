@@ -4,9 +4,8 @@ import TrafficLight
 
 main :: IO ()
 main = do
-  run_test_2 test_data_2_1
-  -- run_test_1 test_data_1_1
-  -- run_test_1 test_data_1_2
+  run_test_1 test_data_1
+  run_test_2 test_data_2
 
 run_test_1 :: [[Int]] -> IO ()
 run_test_1 input = runAllInput input output
@@ -40,10 +39,57 @@ run_test_2 input = runAllInput input output
       string "   walk_count = ", hex walk_count]
 
 
-test_data_1_1, test_data_1_2, test_data_2_1 :: [[Int]]
-test_data_1_1 =
-  [[1], [0], [0], [0], [0], [0], [0], [0], [0], [0]]
-test_data_1_2 =
-  [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]
-test_data_2_1 =
-  [[1, 0], [0, 0], [0, 1], [0, 0], [0, 0], [0, 1], [0, 0], [0, 0], [0, 0], [0, 0], [0, 1], [0, 0], [1, 0], [0, 0]]
+test_data_1, test_data_2 :: [[Int]]
+test_data_1 =
+  [[1],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [1],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0],
+   [0]]
+
+test_data_2 =
+  [[1, 0],
+   [0, 0],
+   [0, 0],
+   [0, 0],
+   [0, 1],
+   [0, 0],
+   [0, 0],
+   [0, 1],
+   [0, 0],
+   [0, 0],
+   [0, 0],
+   [0, 0],
+   [0, 1],
+   [0, 1],
+   [0, 1],
+   [0, 1],
+   [0, 1],
+   [0, 1],
+   [0, 0],
+   [1, 1],
+   [0, 0],
+   [0, 0],
+   [0, 0]]
