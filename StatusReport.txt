@@ -8,4 +8,5 @@ Both controller1 and controller2 circuits have been completed.
 TrafficLightRun.hs compiles.
 Both circuits appear to work correctly.
 Testing is done by running each circuit using several instances of test data, then comparing the result with our expected result. If they match for each instance of test data, the circuit is considered to be working correctly.
+The overall approach was to first define the states using latches, then draw from the latch state the signals for each light.
 One potential design issue in controller2 is that presses of the request_walk button are completely ignored if the light sequence is in progress. So if the pedestrian presses the button during amber just before green, their press won't be registered. They would have to press again once the light returns to green.
