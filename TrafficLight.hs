@@ -61,8 +61,8 @@ controller2 reset walk_request = ((green, amber, red), (wait, walk), walk_count)
     word_size = 16
     zero_word = fanout word_size zero
     one_word = boolword word_size one
-    walk_count = reg word_size (or2 reset walk_request) (mux1w reset s zero_word)
-    (carry, s) = rippleAdd zero (bitslice2 walk_count one_word)
+    walk_count = reg word_size (or2 reset walk_request) (mux1w reset sum zero_word)
+    (_, sum) = rippleAdd zero (bitslice2 walk_count one_word)
 
     -- traffic lights
     green = green1
